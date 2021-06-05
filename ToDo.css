@@ -1,0 +1,145 @@
+html,body{
+	margin:0;
+	padding: 0;
+	font-family: 'Dancing Script', cursive;
+	font-size: 16px;
+}
+
+#create_note{
+	display: grid;
+	place-items:center;
+}
+
+#just{
+	/*border: 2px solid red;*/
+	width:100%;
+	display: grid;
+	place-items:center;
+	margin-bottom: 10px;
+}
+#create_box{
+	margin-top: 10px;
+	width: 30%;
+	height: 20px;
+	padding:10px;
+	border-radius: 50px;
+	outline: none;
+}
+#button_box{
+	outline: none;
+	border-radius: 20px;
+	margin-top: 10px;
+	width:140px;
+	height:40px;
+}
+#all_notes{
+	/*border:3px solid red;*/
+	/*height:500px;*/
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto;
+	grid-gap: 80px;
+}
+
+/*  copied from day 3 */
+
+.my_planning_list{
+	align-self: center;
+	border:3px solid #3b5249;
+	border-radius: 10px;
+	-webkit-box-shadow: 24px 10px 48px -5px rgba(0,0,0,0.75);
+	-moz-box-shadow: 24px 10px 48px -5px rgba(0,0,0,0.75);
+	box-shadow: 24px 10px 48px -5px rgba(0,0,0,0.75);
+	height :400px;
+	width:97%;
+	text-align: center;
+}  
+header{
+	border-bottom:3px solid #3b5249;
+	font-size: 2rem;
+	height:20%;
+	display: grid;
+	place-items:center;
+	background-image: linear-gradient(#519872,#A4B494);
+}
+.btn {
+  background-image: linear-gradient(to bottom, #519872, #A4B494);
+  font-size: 1.2rem;
+  outline: none;
+ 
+}
+.btn:hover {
+  background-image: linear-gradient(to bottom, #A4B494, #519872);
+
+}
+.add_list{
+	display: flex;
+	height:40px;
+}
+.add_list > .text{
+	width:80%;
+	outline: none;
+	border:3px solid #3b5249;
+}
+.add_list > .submit{
+	width:20%;
+
+}
+.list_store{
+	font-size: 1.5rem;
+}
+.text_items{
+	position: relative;
+
+	/*border:3px solid blue;*/
+	width:97%;
+	text-align: left;
+	font-size: 2rem;
+	margin:3px;
+	padding-left: 10px;
+	padding-bottom: 5px;
+	border-bottom:3px solid gray;
+	border-radius: 5px;
+
+}
+i{
+	opacity: 0;
+}
+.text_items:hover > i{
+	opacity: 1;
+}
+i:hover{
+	color: #2fb32b;
+}
+.icon1{
+	padding-top: 4px;
+	right:10px;
+	position:absolute;
+}
+.icon2{
+	padding-top: 4px;
+	right:42px;
+	position: absolute;
+}
+.linedraw{
+	text-decoration: line-through;
+}
+
+@media all and (max-width: 800px){
+	#all_notes{
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto;
+		grid-gap: 50px;
+	}
+}
+@media all and (max-width: 500px){
+	#all_notes{
+		margin: auto;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+	}
+	.my_planning_list{
+		width:80%;
+		margin: auto;
+	}
+}
